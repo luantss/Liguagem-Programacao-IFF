@@ -9,14 +9,21 @@ public class ex3 {
     public static void main(String[] args) {
 
         Scanner leia = new Scanner(System.in);
-        int num;
+        int num, div, quant=0;
 
         System.out.print("Entre com um número: ");
         num = leia.nextInt();
 
-        if(num >  40) {
+        for(div=1; div <= num; div++) {
 
-            System.out.println("O número "+num+" é primo!!!");
+            if(num % div == 0) {
+                quant++;
+            }
+        }
+        if(quant == 2) {
+            System.out.print("O número "+num+" é primo!");
+        } else {
+            System.out.print("O número "+num+" NÃO é primo!");
         }
     }
 }
